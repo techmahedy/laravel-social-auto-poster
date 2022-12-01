@@ -1,8 +1,5 @@
-![CI](https://github.com/techmahedy/laravel-social-auto-poster/workflows/CI/badge.svg)
-[![Code Coverage](https://scrutinizer-ci.com/g/techmahedy/laravel-social-auto-poster/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/techmahedy/laravel-social-auto-poster/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/techmahedy/laravel-social-auto-poster/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/techmahedy/laravel-social-auto-poster/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/techmahedy/laravel-social-auto-poster/v/stable)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
-[![Total Downloads](https://poser.pugx.org/techmahedy/laravel-social-auto-poster/downloads)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
+[![Total Downloads](https://img.shields.io/chocolatey/dt/laravel-social-auto-poster)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
 [![License](https://poser.pugx.org/techmahedy/laravel-social-auto-poster/license)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
 
 ## Introduction
