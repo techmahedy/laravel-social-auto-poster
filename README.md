@@ -1,5 +1,6 @@
 [![Issues](https://img.shields.io/github/issues/techmahedy/laravel-social-auto-poster.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster/issues)
 [![Stars](https://img.shields.io/github/stars/techmahedy/laravel-social-auto-poster.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster/stargazers)
+[![Total Downloads](https://img.shields.io/crates/d/downloads.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster)
 
 ## Introduction
 
