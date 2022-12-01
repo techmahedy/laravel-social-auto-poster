@@ -45,8 +45,3 @@ class AutopostController extends Controller
         (new Laravelia\Autoposter\Services\Meta())->share($data);
     }
 }
-
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE OF CONDUCT](.github/CODE_OF_CONDUCT.md) for details.
