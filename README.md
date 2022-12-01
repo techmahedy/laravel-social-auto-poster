@@ -46,6 +46,7 @@ class AutopostController extends Controller
     }
 }
 
+
 ## Contributing
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) and [CODE OF CONDUCT](.github/CODE_OF_CONDUCT.md) for details.
