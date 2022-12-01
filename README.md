@@ -1,6 +1,5 @@
-[![Latest Stable Version](https://poser.pugx.org/techmahedy/laravel-social-auto-poster/v/stable)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
-[![Total Downloads](https://img.shields.io/chocolatey/dt/laravel-social-auto-poster)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
-[![License](https://poser.pugx.org/techmahedy/laravel-social-auto-poster/license)](https://packagist.org/packages/techmahedy/laravel-social-auto-poster)
+[![Issues](https://img.shields.io/github/issues/techmahedy/laravel-social-auto-poster.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster/issues)
+[![Stars](https://img.shields.io/github/stars/techmahedy/laravel-social-auto-poster.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster/stargazers)
 
 ## Introduction
 
