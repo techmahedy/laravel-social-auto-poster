@@ -1,0 +1,27 @@
+{
+    "name": "laravelia/autoposter",
+    "description": "A Laravel package for auto posting social site",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Laravelia\\Autoposter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mahedi Hasan"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "facebook/graph-sdk": "^5.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravelia\\Autoposter\\AutoPosterServiceProvider"
+            ]
+        }
+    }
+}
