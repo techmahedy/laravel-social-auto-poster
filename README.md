@@ -18,7 +18,7 @@ This package helps you to post automatically to your social site.
 
 ## Installation
 
-    composer require "laravelia/autoposter"
+    composer require laravelia/autoposter
 
 ### Options 
 
@@ -33,17 +33,17 @@ You need to publish autoposter vendor to set social credentials like app_id app_
 <?php
 
 use App\Http\Controllers\Controller;
-use Laravelia\Autoposter\Services\SocialShareService as Share;
+use Laravelia\Autoposter\Services\SocialShareService as SocialShare;
 
 class AutopostController extends Controller
 {   
-    public function share(Share $share)
+    public function share(SocialShare $socialShare)
     {   
         $data = [
             'link' => 'www.example.com',
             'message' => 'Your message here'
         ];
 
-        $share->share($data);
+        $socialShare->share($data);
     }
 }

@@ -3,18 +3,18 @@
 namespace Laravelia\Autoposter\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Laravelia\Autoposter\Services\SocialShareService;
+use Laravelia\Autoposter\Services\SocialShareService as SocialShare;
 
 class AutopostController extends Controller
 {   
-    public function share(SocialShareService $socialShareService)
+    public function share(SocialShare $socialShare)
     {   
         $data = [
             'link' => 'www.codecheef.com',
             'message' => 'Your message here'
         ];
 
-        $socialShareService->share($data);
+        $socialShare->share($data);
 
         return "success";
     }
