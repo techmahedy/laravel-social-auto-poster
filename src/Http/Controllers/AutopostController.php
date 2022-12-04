@@ -1,27 +1,21 @@
 <?php
 
-
 namespace Laravelia\Autoposter\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Laravelia\Autoposter\Services\Meta;
+use Laravelia\Autoposter\Services\SocialShareService;
 
 class AutopostController extends Controller
 {   
-    protected $meta;
-
-    public function __construct(Meta $meta)
-    {
-        $this->meta = $meta;
-    }
-
-    public function share()
+    public function share(SocialShareService $socialShareService)
     {   
         $data = [
             'link' => 'www.codecheef.com',
             'message' => 'Your message here'
         ];
 
-        $this->meta->share($data);
+        $socialShareService->share($data);
+
+        return "success";
     }
 }

@@ -24,21 +24,26 @@ This package helps you to post automatically to your social site.
 
 You need to publish autoposter vendor to set social credentials like app_id app_secret etc.
 
-    php artisan vendor:publish
+    php artisan vendor:publish --provider="Laravelia\Autoposter\AutoPosterServiceProvider"
 
 
 ## Usage
 
 ```php
+<?php
+
+use App\Http\Controllers\Controller;
+use Laravelia\Autoposter\Services\SocialShareService as Share;
+
 class AutopostController extends Controller
-{
-   public function share()
+{   
+    public function share(Share $share)
     {   
         $data = [
-            'link' => 'www.codecheef.com',
+            'link' => 'www.example.com',
             'message' => 'Your message here'
         ];
 
-        (new Laravelia\Autoposter\Services\Meta())->share($data);
+        $share->share($data);
     }
 }
