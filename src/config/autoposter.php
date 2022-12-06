@@ -2,10 +2,17 @@
 
 return [
     'facebook' => [
-        'APP_ID' => '637948304776975',
-        'APP_SECRET' => 'b75d1ad501a4821eb821822e19506382',
-        'ACCESS_TOKEN' =>'EAAJENeoXXw8BAFgKswZBQZCZBiEPAmUE6Gi8RcZAEWIdWhZCsPEgpm82glZAZB1hr10q7hwRv7QH8TfZADqWwjWoa0Xc1UeHXNZCFtFKiBHy5NOMd2MZBSqPPedXtON7tfalIBeKJbQzijOv5ZAe4hB4KpklVQKN6oZCXeeX5CctURsZBXzalOpm7VcsmP7FtBjCXHPCDl5BZBbD6areWovukrrUcY1ylvGFcEYhkZD',
-        'PAGE_ID' => '102452175937718',
+        'APP_ID' => '',
+        'APP_SECRET' => '',
+        'ACCESS_TOKEN' =>'',
         'ENABLE_FACEBOOK_PAGE_SHARE' => false
+    ],
+    'redit' => [
+        'CLIENT_ID' => 'cFh6dxa5Q0Y747bCuGQSpQ',
+        'CLIENT_SECRET' => 'Ae-PMR7cgm5EXJrk70BMjCqHGQYPjw',
+        'REDDIT_USERNAME' => 'durjoy8494',
+        'REDDIT_PASSWORD' => '908494i#3uU',
+        'SUBREDDIT_NAME' => 'durjoy8494',
+        'SUBREDDIT_DISPLAY_NAME' => 'durjoy8494',
     ]
 ];

@@ -22,7 +22,7 @@ This package helps you to post automatically to your social site.
 
 ### Options 
 
-You need to publish autoposter vendor to set social credentials like app_id app_secret etc.
+You need to publish autoposter vendor to set social credentials like app_id app_secret from `config/autoposter.php`.
 
     php artisan vendor:publish --provider="Laravelia\Autoposter\AutoPosterServiceProvider"
 

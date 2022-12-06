@@ -3,6 +3,7 @@
 namespace Laravelia\Autoposter\Services;
 
 use Facebook\Facebook;
+use Illuminate\Support\Facades\Log;
 use Laravelia\Autoposter\Services\Share;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Exceptions\FacebookResponseException;
@@ -28,8 +29,10 @@ class ShareFacebook extends Share
         try {
             $response = $fb->post('/'.config('autoposter.facebook.PAGE_ID').'/feed', $data, $_token);
         } catch(FacebookResponseException $e) {
+            Log::info('Graph returned an error: '.$e->getMessage());
             return 'Graph returned an error: '.$e->getMessage();
         } catch(FacebookSDKException $e) {
+            Log::info('Facebook SDK returned an error: '.$e->getMessage());
             return 'Facebook SDK returned an error: '.$e->getMessage();
         }
         $graphNode = $response->getGraphNode();
