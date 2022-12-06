@@ -10,8 +10,8 @@ class AutopostController extends Controller
     public function share(SocialShare $socialShare)
     {   
         $data = [
-            'link' => 'www.codecheef.com',
-            'message' => 'Your message here'
+            'link' => 'http://www.laravelia.com',
+            'message' => 'Best Laravel Blog'
         ];
 
         $socialShare->share($data);

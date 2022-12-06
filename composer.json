@@ -14,7 +14,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "tumblr/tumblr": "dev-master"
+    },
     "extra": {
         "laravel": {
             "providers": [
