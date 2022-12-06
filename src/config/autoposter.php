@@ -8,11 +8,12 @@ return [
         'ENABLE_FACEBOOK_PAGE_SHARE' => false
     ],
     'redit' => [
-        'CLIENT_ID' => 'cFh6dxa5Q0Y747bCuGQSpQ',
-        'CLIENT_SECRET' => 'Ae-PMR7cgm5EXJrk70BMjCqHGQYPjw',
-        'REDDIT_USERNAME' => 'durjoy8494',
-        'REDDIT_PASSWORD' => '908494i#3uU',
-        'SUBREDDIT_NAME' => 'durjoy8494',
-        'SUBREDDIT_DISPLAY_NAME' => 'durjoy8494',
+        'CLIENT_ID' => '',
+        'CLIENT_SECRET' => '',
+        'REDDIT_USERNAME' => '',
+        'REDDIT_PASSWORD' => '',
+        'SUBREDDIT_NAME' => '',
+        'SUBREDDIT_DISPLAY_NAME' => '',
+        'ENABLE_REDDIT_SHARE' => false
     ]
 ];

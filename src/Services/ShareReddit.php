@@ -9,6 +9,10 @@ class ShareReddit extends Share
 {
     public function applyShare($data)
     {   
+        if(!config('autoposter.redit.ENABLE_REDDIT_SHARE')) {
+            return;
+        }
+
         $params = [
             'grant_type' => 'password',
             'username' => config('autoposter.redit.REDDIT_USERNAME'),
