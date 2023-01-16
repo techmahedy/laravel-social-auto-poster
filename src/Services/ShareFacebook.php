@@ -14,20 +14,30 @@ class ShareFacebook extends Share
 {
     public function applyShare($data)
     {   
-        if(!config('autoposter.facebook.ENABLE_FACEBOOK_PAGE_SHARE')) {
-          return;
+        if(!config('autoposter.facebook.ENABLE_FACEBOOK_PAGE_SHARE')) {       
+            return;
         }
 
-        $fb = new Facebook([
+        $facebook = new Facebook([
             'app_id' => config('autoposter.facebook.APP_ID'),
             'app_secret' => config('autoposter.facebook.APP_SECRET'),
             'default_graph_version' => 'v15.0'
         ]);
         
-        $_token = config('autoposter.facebook.ACCESS_TOKEN');
-        
+        $content = [
+            'link' => isset($data['link']) ? $data['link'] : '',
+            'message' => isset($data['excerpt']) ? $data['excerpt'] : '',
+        ];
+
         try {
-            $response = $fb->post('/'.config('autoposter.facebook.PAGE_ID').'/feed', $data, $_token);
+            $pageAccessToken = config('autoposter.facebook.PAGE_ACCESS_TOKEN');
+            $response = $facebook->post(
+                '/'.
+                config('autoposter.facebook.FACEBOOK_PAGE_ID').
+                '/feed', 
+                $content, 
+                $pageAccessToken
+            );
         } catch(FacebookResponseException $e) {
             Log::info('Graph returned an error: '.$e->getMessage());
             return 'Graph returned an error: '.$e->getMessage();

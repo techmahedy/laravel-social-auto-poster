@@ -12,6 +12,10 @@ class ShareTumblr extends Share
 {
     public function applyShare($data)
     {   
+        if(!config('autoposter.tumblr.ENABLE_TUMBLR_SHARE')) {
+            return;
+        }
+
         $consumerKey = config('autoposter.tumblr.CONSUMER_KEY');
         $consumerSecret = config('autoposter.tumblr.SECRET_KEY');
         $token = config('autoposter.tumblr.TOKEN');
@@ -21,24 +25,18 @@ class ShareTumblr extends Share
         $client = new Client($consumerKey,$consumerSecret,$token,$tokenSecret);
 
         try {
-            // $data = $client->getBlogPosts('itsmetacentric.tumblr.com');
-            // dd($data);
-
-            // $data = ['type'     =>  "photo",
-            //  'tags'     =>  "test2, soir",
-            //  'source'   =>  "https://www.google.fr/images/srpr/logo11w.png"];
-
             $data = [
-                'type'     =>  "text",
-                'tags'     =>  "",
-                'summary'   =>  $data['message'],
-                'body' => $data['link']
+                'type' =>  "link",
+                'tags' =>  isset($data['tags']) ? $data['tags'] : '',
+                'title' => $data['title'],
+                'url' => $data["link"],
+                'description' => isset($data['excerpt']) ? $data['excerpt'] : '',
+                'thumbnail' => isset($data['attachment_url']) ? $data['attachment_url'] : '',
             ];
             $client->createPost($blogName, $data);
+
         } catch (\Throwable $e) {
             Log::info('Returned an error: '.$e->getMessage());
-            return 'Returned an error: '.$e->getMessage();
         }
-        
     }
 }
