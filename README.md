@@ -1,49 +1,96 @@
-[![Issues](https://img.shields.io/github/issues/techmahedy/laravel-social-auto-poster.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster/issues)
-[![Stars](https://img.shields.io/github/stars/techmahedy/laravel-social-auto-poster.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster/stargazers)
-[![Total Downloads](https://img.shields.io/crates/d/downloads.svg?style=flat-square)](https://github.com/techmahedy/laravel-social-auto-poster)
+<a name="section-1"></a>
+# Installation
 
-## Introduction
+- [Installation](#section-1)
+- [Step One](#section-2)
+- [Step Two](#section-3)
+- [Step Three](#section-4)
 
-This package helps you to post automatically to your social site. 
+<a name="section-1"></a>
 
-## Compatibility
+> {success} `Laravelia Autoposter` has a few easy step to setup. No worries. Just follow this below few steps.
 
-| Database                                          | Laravel |
-|:--------------------------------------------------|:--------|
-| MySQL 5.7+                                        | 5.5.29+ |
-| MariaDB 10.2+                                     | 5.8+    |
-| PostgreSQL 9.3+                                   | 5.5.29+ |
-| [SQLite 3.18+](https://www.sqlite.org/json1.html) | 5.6.35+ |
-| SQL Server 2016+                                  | 5.6.25+ |
+<a name="section-2"></a>
 
-## Installation
+## Step One
+In this first step, go to your project root directory and open `your_project/composer.json` file and update it with this below code:
+### `project/composer.json`
+```
+"require": {
+    "laravelia/autoposter": "1.0.5"
+},
+```
+And run
+`composer update'`
 
-    composer require laravelia/autoposter
+Or you can install it via composer directly
+`composer require laravelia/autoposter'`
 
-### Options 
+<a name="section-3"></a>
 
-You need to publish autoposter vendor to get `config/autoposter.php` and configure it with your credentials
+## Step Two
+In this second step, You need to publish autoposter vendor to get `config/autoposter.php`.
 
-    php artisan vendor:publish --provider="Laravelia\Autoposter\AutoPosterServiceProvider"
+`php artisan vendor:publish --provider='Laravelia\Autoposter\AutoPosterServiceProvider'`
 
+###
 
-## Usage
+This command will generate `config/autoposter.php` file and configure it with your credentials like this 🦊
 
-```php
+`your_project/config/autoposter.php`
+###
+```
 <?php
 
+return [
+    'facebook' => [
+        'APP_ID' => '',
+        'APP_SECRET' => '',
+        'PAGE_ACCESS_TOKEN' =>'',
+        'FACEBOOK_PAGE_ID' => '',
+        'ENABLE_FACEBOOK_PAGE_SHARE' => false,
+    ],
+    'tumblr' => [
+        'CONSUMER_KEY' => '',
+        'SECRET_KEY' => '',
+        'TOKEN' => '',
+        'TOKEN_SECRET' => '',
+        'BLOG_NAME' => '',
+        'ENABLE_TUMBLR_SHARE' => false
+    ]
+];
+```
+###
+Make sure after adding the credentials, `ENABLE_FACEBOOK_PAGE_SHARE` and `ENABLE_TUMBLR_SHARE` make it false to true. Otherwise it won't work. 
+
+<a name="section-4"></a>
+
+## Step Three
+Now look at that, how you can use this package.
+```
+<?php
+
+use App\Models\Post;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Laravelia\Autoposter\Services\SocialShareService as SocialShare;
 
-class AutopostController extends Controller
+class ExampleController extends Controller
 {   
-    public function share(SocialShare $socialShare)
+    public function storePost(Request $request, SocialShare $socialShare)
     {   
+        $post = Post::create($request->all());
+
         $data = [
-            'link' => 'www.example.com',
-            'message' => 'Your message here'
+            'link' => $post->permalink, //your content link
+            'title' => $post->title, //your content title
+            'excerpt' => $post->excerpt, //your content short text
+            'tags' => $post->tags, //your contect tags ex: test, test2, test3
+            'attachment_url' => $post->attachment //your contect attachment link
         ];
 
         $socialShare->share($data);
+
+        //continue with your code
     }
 }
