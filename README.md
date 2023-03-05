@@ -1,14 +1,15 @@
 <a name="section-1"></a>
 # Installation
 
-- [Installation](#section-1)
+- [About Pakcage](#section-1)
 - [Step One](#section-2)
 - [Step Two](#section-3)
 - [Step Three](#section-4)
 
 <a name="section-1"></a>
 
-`Laravelia Autoposter` is a composer package for Laravel application. This package will help you to auto post or auto share your content on social media. In this initial release, we are providing `Facebook` and `Tumblr` to share your contect automatically. Hope you will get great expericence with this package. `Laravelia Autoposter` has a few easy step to setup. As this content is premium so we managing this installation with manually. No worries. Just follow this below few steps.
+## About Package
+Laravelia Autoposter is a composer package for Laravel application. This package will help you to auto post or auto share your content on social media. In this initial release, we are providing `Facebook` and `Tumblr` to share your contect automatically. Hope you will get great expericence with this package. Laravelia Autoposter has a few easy step to setup. No worries. Just follow this below few steps.
 
 <a name="section-2"></a>
 
