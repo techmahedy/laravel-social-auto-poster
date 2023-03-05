@@ -18,23 +18,24 @@ In this first step, go to your project root directory and open `your_project/com
 ### `project/composer.json`
 ```
 "require": {
-    "laravelia/autoposter": "^1.0.0"
+    "laravelia/autoposter": "^1.0.1"
 },
 ```
 And run 🦊
 
-`composer update`
+    composer update
 
 Or you can install it via composer directly 🦊
 
-`composer require laravelia/autoposter`
+    composer require laravelia/autoposter
 
 <a name="section-3"></a>
 
 ## Step Two
 In this second step, You need to publish autoposter vendor to get `config/autoposter.php`.
 
-`php artisan vendor:publish --provider='Laravelia\Autoposter\AutoPosterServiceProvider'`
+    php artisan vendor:publish --provider='Laravelia\Autoposter\AutoPosterServiceProvider
+
 
 ###
 
