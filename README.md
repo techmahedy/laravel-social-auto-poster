@@ -18,14 +18,14 @@ In this first step, go to your project root directory and open `your_project/com
 ### `project/composer.json`
 ```
 "require": {
-    "laravelia/autoposter": "1.0.7"
+    "laravelia/autoposter": "^1.0.9"
 },
 ```
 And run
 `composer update'`
 
 Or you can install it via composer directly
-`composer require laravelia/autoposter'`
+`composer require laravelia/autoposter`
 
 <a name="section-3"></a>
 
