@@ -13,7 +13,7 @@
             "name": "Mahedi Hasan"
         }
     ],
-    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "tumblr/tumblr": "dev-master"
     },

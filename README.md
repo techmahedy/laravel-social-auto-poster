@@ -18,7 +18,7 @@ In this first step, go to your project root directory and open `your_project/com
 ### `project/composer.json`
 ```
 "require": {
-    "laravelia/autoposter": "^1.0.0"
+    "laravelia/autoposter": "^2.2"
 },
 ```
 And run 🦊
